@@ -120,7 +120,8 @@ document.getElementById('generateCheat').addEventListener('click', function() {
     if (noLockpickingEnableBtn && noLockpickingEnableBtn.classList.contains('btn-outline-danger')) {
     cheatCommands.push(`cheat_no_lockpicking`);
     }
-    const noPickpocketingEnableBtn = document.querySelector('button.disable-btn[data-target="noPickpocketing"]');
+
+    const noPickpocketingEnableBtn = document.querySelector('button.disable-btn[data-target="NoPickpocketing"]');
     if (noPickpocketingEnableBtn && noPickpocketingEnableBtn.classList.contains('btn-outline-danger')) {
     cheatCommands.push(`cheat_no_pickpocketing`);
     }
