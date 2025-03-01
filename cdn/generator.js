@@ -116,15 +116,15 @@ document.getElementById('generateCheat').addEventListener('click', function() {
     }
 
     // Thieving settings
-    const noLockpickingEnableBtn = document.querySelector('button.enable-btn[data-target="NoLockpicking"]');
-    if (noLockpickingEnableBtn && noLockpickingEnableBtn.classList.contains('btn-outline-success')) {
-      cheatCommands.push(`cheat_no_lockpicking`);
+    const noLockpickingEnableBtn = document.querySelector('button.disable-btn[data-target="NoLockpicking"]');
+    if (noLockpickingEnableBtn && noLockpickingEnableBtn.classList.contains('btn-outline-danger')) {
+    cheatCommands.push(`cheat_no_lockpicking`);
     }
-    const noPickpocketingEnableBtn = document.querySelector('button.enable-btn[data-target="noPickpocketing"]');
-    if (noPickpocketingEnableBtn && noPickpocketingEnableBtn.classList.contains('btn-outline-success')) {
-      cheatCommands.push(`cheat_no_pickpocketing`);
+    const noPickpocketingEnableBtn = document.querySelector('button.disable-btn[data-target="noPickpocketing"]');
+    if (noPickpocketingEnableBtn && noPickpocketingEnableBtn.classList.contains('btn-outline-danger')) {
+    cheatCommands.push(`cheat_no_pickpocketing`);
     }
-    
+
     // Wanted Settings
     const wantedLevelInput = document.getElementById('WantedLevelInput');
     if (wantedLevelInput && wantedLevelInput.value.trim() !== "") {
