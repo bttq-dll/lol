@@ -1,0 +1,711 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bundler</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://bttq.lol/cdn/bundler.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://atugatran.github.io/FontAwesome6Pro/css/all.min.css">
+</head>
+<style>
+      .dsuccess {
+    font-size: 64px;
+    color: #84d564;
+  }
+</style>
+<body>
+    <div class="container my-5">
+        <div class="kcd_logo_div">
+          <img class="logo" src="https://raw.githubusercontent.com/bttq-dll/cdn/refs/heads/main/logo.svg" width="150">
+          <div class="kcd_left_section">
+            <div class="kcd_text_wrapper">
+              <span class="kcd_text">Cheat Bundler</span>
+              <span class="kcd_subtitle">Generation Utility</span>
+            </div>
+          </div>
+          <i class="fa-regular fa-xmark kcd_middle_icon"></i>
+          <div class="kcd_right_section">
+            <img class="kcd_avatar" src="https://i.imgur.com/hfdTsar.png" alt="Avatar">
+            <svg viewBox="0 0 24 24" style="width:1.5rem;height:1.5rem" role="presentation">
+              <path d="M10,16L5,11L6.41,9.58L10,13.17L17.59,5.58L19,7M19,1H5C3.89,1 3,1.89 3,3V15.93C3,16.62 3.35,17.23 3.88,17.59L12,23L20.11,17.59C20.64,17.23 21,16.62 21,15.93V3C21,1.89 20.1,1 19,1Z" style="fill:currentColor"></path>
+            </svg>
+            <div class="kcd_author_wrapper">
+              <span class="kcd_author">itsbttq</span>
+              <span class="kcd_author_subtitle">Verified mod author</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container skillstats-c my-5">
+        <p class="cheat-section skillstats">Skills and Stats</p>
+        <div class="row mt-3">
+          <div class="col">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="levelSwitch">
+              <label class="form-check-label" for="levelSwitch">Change Primary Stats</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="levelSwitch2">
+              <label class="form-check-label" for="levelSwitch2">Change Combat Stats</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="levelSwitch3">
+              <label class="form-check-label" for="levelSwitch3">Change Non-Combat Skills</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="levelSwitch4">
+              <label class="form-check-label" for="levelSwitch4">Change States</label>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <!-- Strength -->
+          <div class="col">
+            <div id="Strength" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="StrengthInput" class="form-label label-icon">
+                  <img src="https://static.wikia.nocookie.net/kingdom-come-deliverance/images/5/5c/KingdomCome_-_Strength.png/revision/latest?cb=20180222233413" width="24px">&nbsp;Strength
+                </label>
+                <input type="number" class="form-control" id="StrengthInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Agility -->
+          <div class="col">
+            <div id="Agility" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="AgilityInput" class="form-label label-icon">
+                  <img src="https://static.wikia.nocookie.net/kingdom-come-deliverance/images/1/14/Agility.png/revision/latest?cb=20180310140418" width="24px">&nbsp;Agility
+                </label>
+                <input type="number" class="form-control" id="AgilityInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Vitality -->
+          <div class="col">
+            <div id="Vitality" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="VitalityInput" class="form-label label-icon">
+                  <img src="https://static.wikia.nocookie.net/kingdom-come-deliverance/images/6/60/KingdomCome_-_Vitality.png/revision/latest?cb=20180222234948" width="24px">&nbsp;Vitality
+                </label>
+                <input type="number" class="form-control" id="VitalityInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Speech -->
+          <div class="col">
+            <div id="Speech" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="SpeechInput" class="form-label label-icon">
+                  <img src="https://static.wikia.nocookie.net/kingdom-come-deliverance/images/4/48/KingdomCome_-_Speech.png/revision/latest?cb=20180223001713" width="24px">&nbsp;Speech
+                </label>
+                <input type="number" class="form-control" id="SpeechInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row mt-3">
+          <!-- Warfare -->
+          <div class="col">
+            <div id="Warfare" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="WarfareInput" class="form-label label-icon">
+                  <img src="https://static.wikia.nocookie.net/kingdom-come-deliverance/images/a/a8/Kingdom_Come_Warfare_icon.png/revision/latest?cb=20180226213353" width="24px">&nbsp;Warfare
+                </label>
+                <input type="number" class="form-control" id="WarfareInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Defense -->
+          <div class="col">
+            <div id="Defense" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="DefenseInput" class="form-label label-icon">
+                  <img src="https://static.wikia.nocookie.net/kingdom-come-deliverance/images/2/2c/Kingdom_Come_Defence_icon.png/revision/latest?cb=20180226213352" width="24px">&nbsp;Defense
+                </label>
+                <input type="number" class="form-control" id="DefenseInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Axe -->
+          <div class="col">
+            <div id="Axe" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="AxeInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/axe.png" width="18px">&nbsp;Axe
+                </label>
+                <input type="number" class="form-control" id="AxeInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Bow -->
+          <div class="col">
+            <div id="Bow" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="BowInput" class="form-label label-icon">
+                  <img src="https://static.wikia.nocookie.net/kingdom-come-deliverance/images/3/32/Kingdom_Come_Bow_icon.png/revision/latest?cb=20180226213351" width="24px">&nbsp;Bow
+                </label>
+                <input type="number" class="form-control" id="BowInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Mace -->
+          <div class="col">
+            <div id="Mace" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="MaceInput" class="form-label label-icon">
+                  <img src="https://static.wikia.nocookie.net/kingdom-come-deliverance/images/3/31/Kingdom_Come_Mace_icon.png/revision/latest?cb=20180226213354" width="24px">&nbsp;Mace
+                </label>
+                <input type="number" class="form-control" id="MaceInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Sword -->
+          <div class="col">
+            <div id="Sword" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="SwordInput" class="form-label label-icon">
+                  <img src="https://static.wikia.nocookie.net/kingdom-come-deliverance/images/c/cd/Kingdom_Come_Sword_icon.png/revision/latest?cb=20180226213352" width="24px">&nbsp;Sword
+                </label>
+                <input type="number" class="form-control" id="SwordInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Unarmed -->
+          <div class="col">
+            <div id="Unarmed" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="UnarmedInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/unarmed.png" width="18px">&nbsp;Unarmed
+                </label>
+                <input type="number" class="form-control" id="UnarmedInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row mt-3">
+          <!-- Alchemy -->
+          <div class="col">
+            <div id="Alchemy" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="AlchemyInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/alchemy.png" width="18px">&nbsp;Alchemy
+                </label>
+                <input type="number" class="form-control" id="AlchemyInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Drinking -->
+          <div class="col">
+            <div id="Drinking" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="DrinkingInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/drinking.png" width="18px">&nbsp;Drinking
+                </label>
+                <input type="number" class="form-control" id="DrinkingInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Herbalism -->
+          <div class="col">
+            <div id="Herbalism" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="HerbalismInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/herbalism.png" width="18px">&nbsp;Herbalism
+                </label>
+                <input type="number" class="form-control" id="HerbalismInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Horsemanship -->
+          <div class="col">
+            <div id="Horsemanship" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="HorsemanshipInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/horsemanship.png" width="18px">&nbsp;Horsemanship
+                </label>
+                <input type="number" class="form-control" id="HorsemanshipInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Houndmaster -->
+          <div class="col">
+            <div id="Houndmaster" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="HoundmasterInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/houndmaster.png" width="18px">&nbsp;Houndmaster
+                </label>
+                <input type="number" class="form-control" id="HoundmasterInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Hunting -->
+          <div class="col">
+            <div id="Hunting" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="HuntingInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/hunting.png" width="18px">&nbsp;Hunting
+                </label>
+                <input type="number" class="form-control" id="HuntingInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row mt-3">
+          <!-- Lockpicking -->
+          <div class="col">
+            <div id="Lockpicking" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="LockpickingInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/lockpicking.png" width="18px">&nbsp;Lockpicking
+                </label>
+                <input type="number" class="form-control" id="LockpickingInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Maintenance -->
+          <div class="col">
+            <div id="Maintenance" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="MaintenanceInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/maintenance.png" width="18px">&nbsp;Maintenance
+                </label>
+                <input type="number" class="form-control" id="MaintenanceInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Pickpocketing -->
+          <div class="col">
+            <div id="Pickpocketing" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="PickpocketingInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/pickpocketing.png" width="18px">&nbsp;Pickpocketing
+                </label>
+                <input type="number" class="form-control" id="PickpocketingInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Reading -->
+          <div class="col">
+            <div id="Reading" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="ReadingInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/reading.png" width="18px">&nbsp;Reading
+                </label>
+                <input type="number" class="form-control" id="ReadingInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Stealth -->
+          <div class="col">
+            <div id="Stealth" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="StealthInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/stealth.png" width="18px">&nbsp;Stealth
+                </label>
+                <input type="number" class="form-control" id="StealthInput" placeholder="Enter levels">
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row mt-3">
+          <!-- Health -->
+          <div class="col">
+            <div id="Health" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="HealthInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/health.png" width="18px">&nbsp;Health
+                </label>
+                <input type="number" class="form-control" id="HealthInput" placeholder="Enter number">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Stamina -->
+          <div class="col">
+            <div id="Stamina" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="StaminaInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/stamina.png" width="18px">&nbsp;Stamina
+                </label>
+                <input type="number" class="form-control" id="StaminaInput" placeholder="Enter number">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Energy -->
+          <div class="col">
+            <div id="Energy" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="ExhaustInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/energy.png" width="18px">&nbsp;Energy
+                </label>
+                <input type="number" class="form-control" id="ExhaustInput" placeholder="Enter number">
+              </div>
+            </div>
+          </div>
+      
+          <!-- Nourishment -->
+          <div class="col">
+            <div id="Nourishment" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="HungerInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/nourishment.png" width="18px">&nbsp;Nourishment
+                </label>
+                <input type="number" class="form-control" id="HungerInput" placeholder="Enter number">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container gamemechanics-c my-5">
+        <p class="cheat-section gamemechanics">Game mechanics</p>
+        <div class="row">
+          <div class="col">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="levelSwitch5">
+              <label class="form-check-label" for="levelSwitch5">Thieving Settings</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="levelSwitch6">
+              <label class="form-check-label" for="levelSwitch6">Wanted settings</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="levelSwitch7">
+              <label class="form-check-label" for="levelSwitch7">Regeneration settings</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="levelSwitch8">
+              <label class="form-check-label" for="levelSwitch8">Map settings</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="levelSwitch9">
+              <label class="form-check-label" for="levelSwitch9">Merchants &amp; Stolen Items</label>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <!-- NoLockpicking -->
+          <div class="col">
+            <div id="NoLockpicking" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="NoLockpickingInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/lockpicking.png" width="18px">&nbsp;Lockpicking
+                </label>
+                <div class="btn-group" role="group" aria-label="Enable and Disable Buttons">
+                  <button type="button" class="btn btn-outline-secondary enable-btn" data-target="NoLockpicking">Enable</button>
+                  <button type="button" class="btn btn-outline-secondary disable-btn" data-target="NoLockpicking">Disable</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- NoPickpocketing -->
+          <div class="col">
+            <div id="NoPickpocketing" class="mt-3" style="display: none;">
+                <div class="mb-3">
+                  <label for="NoPickpocketingInput" class="form-label label-icon">
+                    <img src="https://bttq.lol/cdn/i/pickpocketing.png" width="18px">&nbsp;Pickpocketing
+                  </label>
+                  <div class="btn-group" role="group" aria-label="Enable and Disable Buttons">
+                    <button type="button" class="btn btn-outline-secondary enable-btn" data-target="NoPickpocketing">Enable</button>
+                    <button type="button" class="btn btn-outline-secondary disable-btn" data-target="NoPickpocketing">Disable</button>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <!-- WantedLevel -->
+          <div class="col">
+            <div id="WantedLevel" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="WantedLevelInput" class="form-label">Set Wanted Level</label>
+                <input type="range" class="form-range" min="0" max="3" step="1" id="WantedLevelInput" list="wanted-ticks">
+                <div class="d-flex justify-content-between">
+                  <small>Not wanted</small>
+                  <small>Wanted for money</small>
+                  <small>Wanted for jail</small>
+                  <small>Wanted dead</small>
+                </div>
+                <p id="WantedLevelText" class="mt-2 text-muted text-center">Not wanted</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <!-- HealthRegeneration -->
+          <div class="col">
+            <div id="HealthRegeneration" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="HealthRegenInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/health.png" width="18px">&nbsp;Health Regeneration
+                </label>
+                <input type="number" class="form-control" id="HealthRegenInput" placeholder="Enter number">
+              </div>
+            </div>
+          </div>
+      
+          <!-- StaminaRegeneration -->
+          <div class="col">
+            <div id="StaminaRegeneration" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="StaminaRegenInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/stamina.png" width="18px">&nbsp;Stamina Regeneration
+                </label>
+                <input type="number" class="form-control" id="StaminaRegenInput" placeholder="Enter number">
+              </div>
+            </div>
+          </div>
+      
+          <!-- ExhaustRegeneration -->
+          <div class="col">
+            <div id="ExhaustRegeneration" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="ExhaustRegenInput" class="form-label label-icon">
+                  <img src="https://bttq.lol/cdn/i/energy.png" width="18px">&nbsp;Energy Regeneration
+                </label>
+                <input type="number" class="form-control" id="ExhaustRegenInput" placeholder="Enter number">
+              </div>
+            </div>
+          </div>
+      
+          <!-- AllRegeneration -->
+          <div class="col">
+            <div id="AllRegeneration" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="AllRegenInput" class="form-label label-icon">
+                  <img src="https://static.wikia.nocookie.net/kingdom-come-deliverance/images/6/6e/Kingdom_Come_Deliverance_wallpaper.jpeg/revision/latest/smart/width/36/height/36?cb=20180129201427" width="18px">&nbsp;All Regeneration
+                </label>
+                <input type="number" class="form-control" id="AllRegenInput" placeholder="Enter number">
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <!-- MapReveal -->
+          <div class="col">
+            <div id="MapReveal" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="MapRevealInput" class="form-label label-icon">
+                  <img src="https://static.wikia.nocookie.net/kingdomcomed_gamepedia/images/2/26/Icon_fast_travel.png/revision/latest/scale-to-width-down/32?cb=20180215132744" width="18px">&nbsp;Reveal Fog on map
+                </label>
+                <div class="btn-group" role="group" aria-label="MapReveal">
+                  <button type="button" class="btn btn-outline-secondary enable-btn" data-target="MapReveal">Enable</button>
+                  <button type="button" class="btn btn-outline-secondary disable-btn" data-target="MapReveal">Disable</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <!-- MerchantStolenItems -->
+          <div class="col">
+            <div id="MerchantStolenItems" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="MerchantStolenItemsInput" class="form-label label-icon">
+                  <img src="https://static.wikia.nocookie.net/kingdomcomed_gamepedia/images/6/63/Icon_map_trader.png/revision/latest/scale-to-width-down/32?cb=20180215133251" width="24px">&nbsp;Merchants accept Stolen items
+                </label>
+                <div class="btn-group" role="group" aria-label="MerchantStolenItems">
+                  <button type="button" class="btn btn-outline-secondary enable-btn" data-target="MerchantStolenItems">Enable</button>
+                  <button type="button" class="btn btn-outline-secondary disable-btn" data-target="MerchantStolenItems">Disable</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- OwnStolenItems -->
+          <div class="col">
+            <div id="OwnStolenItems" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="OwnStolenItemsInput" class="form-label label-icon">
+                  <img src="https://static.wikia.nocookie.net/kingdomcomed_gamepedia/images/2/26/Icon_fast_travel.png/revision/latest/scale-to-width-down/32?cb=20180215132744" width="24px">&nbsp;Own Stolen Items
+                </label>
+                <div class="btn-group" role="group" aria-label="OwnStolenItems">
+                  <button type="button" class="btn btn-outline-secondary enable-btn" data-target="OwnStolenItems">Enable</button>
+                  <button type="button" class="btn btn-outline-secondary disable-btn" data-target="OwnStolenItems">Disable</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container horseitems-c my-5">
+        <p class="cheat-section horseitems">Horse &amp; Items</p>
+        <div class="row">
+          <div class="col">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="levelSwitch10">
+              <label class="form-check-label" for="levelSwitch10">Spawning Valuables</label>
+            </div>
+          </div>
+          <div class="col">
+            <div class="form-check form-switch">
+              <input class="form-check-input" type="checkbox" id="levelSwitch11">
+              <label class="form-check-label" for="levelSwitch11">Spawning Horse &amp; Items</label>
+            </div>
+          </div>
+        </div>
+      
+        <div class="row">
+          <!-- SetLockpicks -->
+          <div class="col">
+            <div id="SetLockpicks" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="SetLockpicksInput" class="form-label label-icon">
+                  <img src="https://static.wikia.nocookie.net/kingdomcomed_gamepedia/images/0/0c/Ico_map_24.png/revision/latest/scale-to-width-down/32?cb=20180215133304" width="18px">&nbsp;Spawn Lockpicks
+                </label>
+                <input type="number" class="form-control" id="SetLockpicksInput" placeholder="Enter number">
+              </div>
+            </div>
+          </div>
+      
+          <!-- SetMoney -->
+          <div class="col">
+            <div id="SetMoney" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="SetMoneyInput" class="form-label label-icon">
+                  <img src="https://static.wikia.nocookie.net/kingdomcomed_gamepedia/images/9/90/Icon_map_beehive.png/revision/latest/scale-to-width-down/32?cb=20180215133315" width="18px">&nbsp;Spawn Money
+                </label>
+                <input type="number" class="form-control" id="SetMoneyInput" placeholder="Enter number">
+              </div>
+            </div>
+          </div>
+      
+          <!-- SetSchnapps -->
+          <div class="col">
+            <div id="SetSchnapps" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="SetSchnappsInput" class="form-label label-icon">
+                  <img src="https://static.wikia.nocookie.net/kingdom-come-deliverance/images/4/40/Saviour_Schnapps.png/revision/latest?cb=20180216210503" width="18px">&nbsp;Spawn Saviour Schnapps
+                </label>
+                <input type="number" class="form-control" id="SetSchnappsInput" placeholder="Enter number">
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="row">
+          <!-- BestHorse -->
+          <div class="col">
+            <div id="BestHorse" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="BestHorseInput" class="form-label label-icon">
+                  <img src="https://static.wikia.nocookie.net/kingdomcomed_gamepedia/images/a/ae/Icon_map_horse_trader.png/revision/latest/scale-to-width-down/32?cb=20180304151736" width="24px">&nbsp;Add best horse
+                </label>
+                <div class="btn-group" role="group" aria-label="BestHorse">
+                  <button type="button" class="btn btn-outline-secondary enable-btn" data-target="BestHorse">Enable</button>
+                  <button type="button" class="btn btn-outline-secondary disable-btn" data-target="BestHorse">Disable</button>
+                </div>
+              </div>
+            </div>
+          </div>
+      
+          <!-- WarhouseSet -->
+          <div class="col">
+            <div id="WarhouseSet" class="mt-3" style="display: none;">
+              <div class="mb-3">
+                <label for="WarhouseSetInput" class="form-label label-icon">
+                  <img src="https://press.warhorsestudios.cz/uploads/867yl9kp6t_5lyvwgv75k_WH_LogoShield01_d4741000ee.png" width="24px">&nbsp;Add Warhouse Set
+                </label>
+                <div class="btn-group" role="group" aria-label="WarhouseSet">
+                  <button type="button" class="btn btn-outline-secondary enable-btn" data-target="WarhouseSet">Enable</button>
+                  <button type="button" class="btn btn-outline-secondary disable-btn" data-target="WarhouseSet">Disable</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="container my-5 text-center">
+        <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Generate Cheat
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5 text-center" id="staticBackdropLabel"><img class="logo" src="https://raw.githubusercontent.com/bttq-dll/cdn/refs/heads/main/logo.svg" width="150"></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body"><br>
+            <i class="fa-solid fa-location-smile dsuccess"></i><br>
+            <h1 class="display-6">Success!</h1><br>
+            <br>
+            <ul class="list-group">
+                <li class="list-group-item">Download <code>cheat.txt</code> file below.</li>
+                <li class="list-group-item">Open Kingdom Come Deliverance main Folder</li>
+                <li class="list-group-item">Move <code>cheat.txt</code> to <code>Data</code> folder</li>
+                <li class="list-group-item">Launch Game</li>
+                <li class="list-group-item">Hit <code>~</code> on keyboard to open console</li>
+                <li class="list-group-item">Type-in <code>cheat_exec cheat.txt</code> and hit <code>ENTER</code></li>
+              </ul>
+            
+        </div>
+        <div class="modal-footer text-center">
+            <center>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button id="generateCheat" class="btn btn-success">Download</button>
+        </center>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://bttq.lol/cdn/bundler.js"></script>
+    <script src="https://bttq.lol/cdn/generator.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/malihu-custom-scrollbar-plugin@3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+</body>
+</html>
