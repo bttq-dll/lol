@@ -1,0 +1,182 @@
+@import url("https://rsms.me/inter/inter.css");
+
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+
+}
+
+:root {
+    color-scheme: dark;
+  --bg-color: #101010;
+  --text-color: #f1f1f1;
+  --skillsandstats: #ffc658;
+  --gamemechanics: #58daff;
+  --horseitems: #58ffab;
+}
+
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  .kcd_logo_div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Rozstawienie elementów */
+    gap: 20px;
+    max-width: 650px;
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 5px;
+    padding: 6px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+
+}
+
+.kcd_text_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.kcd_right_section {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Odstęp między elementami */
+}
+
+.kcd_avatar {
+    width: 38.5px;
+    height: 38.5px;
+    border-radius: 50%; /* Zaokrąglony avatar */
+    object-fit: cover;
+}
+
+.kcd_author_wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.kcd_author {
+    font-size: 16px;
+    font-weight: 800;
+    font-family: 'Nunito', sans-serif;
+    letter-spacing: 0.6px;
+    color: white;
+}
+
+.kcd_author_subtitle {
+    font-size: 12px;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    color: #bbbbbb; /* Jaśniejszy szary dla subtelności */
+}
+
+.logo {
+    width: 150px;
+}
+
+.kcd_middle_icon {
+    font-size: 16px;
+    color: white;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+.kcd_text {
+    font-size: 16px;
+    font-weight: 800;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: white;
+}
+
+.kcd_subtitle {
+    font-size: 12px;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 0.6px;
+    color: #bbbbbb; /* Jaśniejszy szary dla subtelności */
+}
+
+
+.cheat-section {
+    font-size: 14px;
+    font-weight: 800;
+    font-family: 'Nunito', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.6px; 
+}
+
+.label-icon {
+    line-height: 24px;
+    
+}
+
+.label-icon img {
+    line-height: 24px;
+}
+
+.skillstats {
+    color: var(--skillsandstats);
+}
+
+.skillstats-c {
+padding: 25px;
+box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+border-radius: 10px;
+border: 1px solid rgba(255,255,255,0.1);
+}
+
+.gamemechanics {
+    color: var(--gamemechanics);
+}
+
+.gamemechanics-c {
+    padding: 25px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+.horseitems {
+    color: var(--horseitems);
+}
+
+.horseitems-c {
+    padding: 25px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Klasa bazowa dla elementu z przejściem */
+.transition {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+  }
+  
+  /* Klasa widoczna, która sprawia, że element staje się widoczny */
+  .transition.visible {
+    opacity: 1;
+    max-height: 500px; /* Ustaw na wystarczającą wartość, aby zmieścić zawartość */
+  }
+  
