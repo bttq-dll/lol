@@ -1,0 +1,7 @@
+@font-face {
+    font-family: 'Open Runde', sans-serif;;
+    src: url('fonts/OpenRunde-Semibold.woff2') format('woff2'),
+         url('fonts/OpenRunde-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
