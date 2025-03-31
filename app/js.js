@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const themeImage = document.getElementById('themeImage');
 
     // Sprawdzenie, który motyw jest ustawiony na starcie
-    let isDarkTheme = themeStylesheet.href.includes('css-dark.css');
+    let isDarkTheme = themeStylesheet.href.includes('css-dark.cleaned.css');
 
     // Ustawienie poprawnego obrazka od razu po załadowaniu strony
     themeImage.src = isDarkTheme ? 'app/bttq-light.svg' : 'app/bttq-dark.svg';
@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function () {
         isDarkTheme = !isDarkTheme;
 
         // Zmiana motywu
-        themeStylesheet.href = isDarkTheme ? 'app/css-dark.css' : 'app/css-light.css';
+        themeStylesheet.href = isDarkTheme ? 'app/css-dark.cleaned.css' : 'app/css-light.cleaned.css';
 
         // Zmiana obrazka
         themeImage.src = isDarkTheme ? 'app/bttq-light.svg' : 'app/bttq-dark.svg';

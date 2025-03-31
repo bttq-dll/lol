@@ -38,6 +38,28 @@
   --pattern: url("square-pattern-light.svg");
 }
 
+stripe-buy-button {
+  display: block;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+iframe[src*="stripe.com"] {
+  background: transparent !important;
+}
+
+.BuyButton-container {
+  background: none !important;
+}
+
+iframe[src*="stripe.com"] {
+  mix-blend-mode: multiply;
+  background: transparent !important;
+  opacity: 0.9; /* Adjust transparency */
+}
+
+
 
 
 .light-theme {
